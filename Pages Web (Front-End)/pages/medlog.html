@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+   <head>
+      <meta charset="utf-8">
+      <title>med</title>
+      <link rel="stylesheet" href="/pages/css/style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <div class="container" id="container">
+        <h4>créer un compte </h4> 
+        <div class="row">
+            <form class="form-control">
+                <label id="n">nom</label>
+                <input type="text" placeholder=" nom" required>
+                <label id="pn">prenom</label>
+                <input type="text" placeholder="prenom" required> 
+                <label id="cin">cin</label>
+                <input type="text" placeholder=" cin" required>
+                <label id="mail">email</label> 
+                <input type="email", placeholder="Email ">
+                <label id="mdp">mot de passe</label>
+               <input type="password" placeholder="mot de passe ">
+                <label id="dn">date de naissance</label> 
+                <input type="date">
+                <div class="sexe">
+                    <label id="se">sexe</label>
+                    <input type="radio" name="sexe" class=" sexe femme" id="sexe-femme" >
+                    <label for="sexe-femme">femme</label>
+                    <input type="radio" name="sexe" class="  sexe homme" id="sexe-homme" >
+                    <label for="sexe-homme">homme</label>
+                    </div>
+                <label id="lr">lieu de residence </label>
+                <input type="text" placeholder=" lieu de residence" required>
+                <label id="fichier">impoter des fichiers pour verifier votre identité </label>
+                <input type="file" placeholder=" diplome ,certificat" required>
+                <div class="select">
+                    <select>
+                      <option>spécialités</option>
+                      <option value="cardiologue">cardiologue</option>
+                      <option value="dentiste">dentiste</option>
+                      <option value="généraliste">généraliste</option>
+                      <option value="interniste">interniste</option>
+                    </select>
+                </div>
+                <div class="btn">
+                <button type="submit">envoyer</button>
+                </div>      
+                
+
+        </div>
+    </div>
+</body>
+</html>
