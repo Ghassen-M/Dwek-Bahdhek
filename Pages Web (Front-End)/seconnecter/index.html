@@ -5,20 +5,31 @@
       <title>connexion</title>
       <link rel="stylesheet" href="/seconnecter/css/style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+      <link rel="icon" type="image/x-icon" href="">
+      
    </head>
+<body>
 <div class="container" id="container">
     <div class="form-container sinscrire-container">
             <form action="#">
-                <div class="dropdown">
-                  <button class="boutonmenuprincipal">vous etes </button>
-                        <div class="dropdown-body">
-                         <a href="/pages/clientlog.html">client</a>
-                         <a href="/pages/pharmalog.html">pharmacien</a>
-                         <a href="/pages/medlog.html">medecin</a>
-                       
+               <div class="profil">
+                  <div class="col-4 ">
+                  <img class="rounded-circle img-fluid " alt="Photo de profil" src="/seconnecter/img/user-icon.png"
+                         height="75" width="75">
+                     <a href="/pages/medlog.html">medecin</a>
                   </div>
-                </div>
+                  <div class="col-4">
+                  <img class="rounded-circle img-fluid " alt="Photo de profil" src="/seconnecter/img/user-icon.png"
+                      height="75" width="75">
+                      <a href="/pages/pharmalog.html">pharmacien</a>
+                     </div>
+                  <div class="col-4">
+                 <img class="rounded-circle img-fluid" alt="Photo de profil" src="/seconnecter/img/user-icon.png"
+                      height="75" width="75">
+                      <a href="/pages/clientlog.html">client</a>
+                  </div>
+               </div>
+              
                 
             </form>
     </div>
@@ -39,10 +50,9 @@
                      <input type="password" required>
                   </div>
                   <div class="pass-oublier">
-                     <a href="#">mot de passe oublier?</a>
+                     <a href="#">mot de passe oublié?</a>
                   </div>
                   <div class="btn">
-                     <div class="inner"></div>
                      <button type="submit">se connecter</button>
                   </div>
                   
@@ -53,15 +63,13 @@
     <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                   <h1>Déjà inscri?</h1> 
-                   
-
-                    <button class="ghost" id="signIn">se connecter</button>
+                   <h1>Déjà inscrit?</h1> 
+                  <button class="ghost" id="seconnecter">se connecter</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>vous n'aviez pas de compte?</h1>
+                    <h1>Vous n'aviez pas de compte ?</h1>
                 
-                    <button class="ghost" id="signUp">s'inscrire</button>
+                    <button class="ghost" id="sinscrire">s'inscrire</button>
                 </div>
             </div>
         </div> 
