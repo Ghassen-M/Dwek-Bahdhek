@@ -2,38 +2,66 @@
 <html lang="en" >
    <head>
       <meta charset="utf-8">
-      <title>med</title>
+      <title>Médecin</title>
       <link rel="stylesheet" href="/pages/css/style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
     </head>
-    <body>
-      <div class="container" id="container">
-        <h4>créer un compte </h4> 
-        <div class="row">
-            <form class="form-control">
-                <label id="n">nom</label>
-                <input type="text" placeholder=" nom" required>
-                <label id="pn">prenom</label>
-                <input type="text" placeholder="prenom" required> 
-                <label id="cin">cin</label>
-                <input type="text" placeholder=" cin" required>
-                <label id="mail">email</label> 
-                <input type="email", placeholder="Email ">
-                <label id="mdp">mot de passe</label>
-               <input type="password" placeholder="mot de passe ">
-                <label id="dn">date de naissance</label> 
-                <input type="date">
-                <div class="sexe">
-                    <label id="se">sexe</label>
-                    <input type="radio" name="sexe" class=" sexe femme" id="sexe-femme" >
-                    <label for="sexe-femme">femme</label>
-                    <input type="radio" name="sexe" class="  sexe homme" id="sexe-homme" >
-                    <label for="sexe-homme">homme</label>
-                    </div>
-                <label id="lr">lieu de residence </label>
-                <input type="text" placeholder=" lieu de residence" required>
-                <label id="fichier">impoter des fichiers pour verifier votre identité </label>
-                <input type="file" placeholder=" diplome ,certificat" required>
+  <body>
+    <div class="container" id="container">
+        <form class="form-control">
+          <div class="row ">
+            <h4>créer un compte Médecin</h4> 
+              <div class="col-6 ">
+                  <label id="n">nom</label>
+                  <input type="text"id="nom" class="form-control" placeholder=" nom" pattern="[a-zA-Z]" required>
+              </div>
+              <div class="col-6">
+                  <label id="pn">prenom</label>
+                  <input type="text" id="prenom"class="form-control" placeholder="prenom" pattern="[a-zA-Z]"required>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label id="cn">cin</label>
+              <input type="text" id="cin"class="form-control" placeholder="cin" pattern="[0-9]{8}"required>
+            </div>
+              <div class="col-6">
+                  <label id="mail">email</label> 
+                  <input type="email" id="email"class="form-control" placeholder="Email" required>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label id="mp">mot de passe</label>
+              <input type="password"id="mdp" class="form-control" placeholder="mot de passe " required>
+          </div>
+              <div class="col-6">
+                  <label id="d">date de naissance</label> 
+                              <input id="dn"type="date">
+              </div>
+          </div>
+           <div class="row">
+                <div class="col-6">
+                  <label id="se">sexe</label>
+                  <input type="radio" name="sexe" class=" sexe femme" id="sexe-femme" >
+                  <label for="sexe-femme">femme</label>
+                  <input type="radio" name="sexe" class="  sexe homme" id="sexe-homme" >
+                  <label for="sexe-homme">homme</label>
+               </div>
+              <div class="col-6">
+                <label id="tlp">numéro de téléphone</label>
+                <input type="text" id="tel"class="form-control" placeholder=" numéro de téléphone" pattern="[0-9]{8}"required>
+              </div>
+           </div>
+            <div class="row">
+              <div class="col-6">
+              <label for="formFile" class="form-label">Copie PDF des diplômes et des documents vérifiant votre identité (dans un seul fichier)</label>
+              <input class="form-control" type="file" id="formFile">
+              </div>
+              <div class=" col-6 ">
+                <label id="sp">spécialités</label>
                 <div class="select">
                     <select>
                       <option>spécialités</option>
@@ -43,12 +71,17 @@
                       <option value="interniste">interniste</option>
                     </select>
                 </div>
-                <div class="btn">
-                <button type="submit">envoyer</button>
-                </div>      
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button id="b1" type=" submit" class="btn">
+                  envoyer
+              </button>               
+            </div>  
                 
 
-        </div>
-    </div>
-</body>
+      
+    </form>
+  </div>
+  </body>
 </html>
