@@ -1,1 +1,82 @@
-<p class="text-primary">login works!</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>connexion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="">
+
+</head>
+
+<body>
+    <div class="container" id="container" [ngClass]="{'right-panel-active':isInscri}">
+        <div class=" form-container sinscrire-container">
+            <form action="#">
+                <div class="row">
+                    <h2>Vous êtes</h2>
+                </div>
+                <div class=" row profil">
+
+                    <div class="col-4 ">
+                        <img class="rounded-circle img-fluid " alt="Photo de profil" src="../../assets/user-icon.png"
+                            height="75" width="75">
+                        <a href="/pages/medlog.html">medecin</a>
+                    </div>
+                    <div class="col-4">
+                        <img class="rounded-circle img-fluid " alt="Photo de profil" src="../../assets/user-icon.png"
+                            height="75" width="75">
+                        <a href="/pages/pharmalog.html">pharmacien</a>
+                    </div>
+                    <div class="col-4">
+                        <img class="rounded-circle img-fluid" alt="Photo de profil" src="../../assets/user-icon.png"
+                            height="75" width="75">
+                        <a href="/pages/clientlog.html">client</a>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="form-container seconnecter-container">
+            <div class="center">
+                <div class="container">
+                    <label class="close-btn "></label>
+
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        <div class="data">
+                            <label>Email </label>
+                            <input type="email" formControlName="email" required>
+                        </div>
+                        <div class="data">
+                            <label>mot de passe</label>
+                            <input type="password" formControlName="password" required>
+                        </div>
+                        <div class="pass-oublier">
+                            <a href="#">mot de passe oublié?</a>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">se connecter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class=" overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Déjà inscrit?</h1>
+                    <button class="ghost" id="seconnecter" (click)="connecte()">se
+                        connecter</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Vous n'aviez pas de compte ?</h1>
+
+                    <button class="ghost" id="sinscrire" (click)=" inscri()">s'inscrire</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

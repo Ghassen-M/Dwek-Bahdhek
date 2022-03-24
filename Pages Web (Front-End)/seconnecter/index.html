@@ -1,46 +1,48 @@
 <!DOCTYPE html>
-<html >
-   <head>
-      <meta charset="utf-8">
-      <title>connexion</title>
-      <link rel="stylesheet" href="/seconnecter/css/style.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/x-icon" href="">
-      
-   </head>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>connexion</title>
+   <link rel="stylesheet" href="/seconnecter/css/style.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/x-icon" href="">
+
+</head>
+
 <body>
-<div class="container" id="container">
-    <div class="form-container sinscrire-container">
-            <form action="#">
-               <div class="profil">
-                  <div class="col-4 ">
+   <div class="container" id="container">
+      <div class="form-container sinscrire-container">
+         <form action="#">
+            <div class="profil">
+               <div class="col-4 ">
                   <img class="rounded-circle img-fluid " alt="Photo de profil" src="/seconnecter/img/user-icon.png"
-                         height="75" width="75">
-                     <a href="/pages/medlog.html">medecin</a>
-                  </div>
-                  <div class="col-4">
-                  <img class="rounded-circle img-fluid " alt="Photo de profil" src="/seconnecter/img/user-icon.png"
-                      height="75" width="75">
-                      <a href="/pages/pharmalog.html">pharmacien</a>
-                     </div>
-                  <div class="col-4">
-                 <img class="rounded-circle img-fluid" alt="Photo de profil" src="/seconnecter/img/user-icon.png"
-                      height="75" width="75">
-                      <a href="/pages/clientlog.html">client</a>
-                  </div>
+                     height="75" width="75">
+                  <a href="/pages/medlog.html">medecin</a>
                </div>
-              
-                
-            </form>
-    </div>
-    <div class="form-container seconnecter-container">
-        <div class="center">
+               <div class="col-4">
+                  <img class="rounded-circle img-fluid " alt="Photo de profil" src="/seconnecter/img/user-icon.png"
+                     height="75" width="75">
+                  <a href="/pages/pharmalog.html">pharmacien</a>
+               </div>
+               <div class="col-4">
+                  <img class="rounded-circle img-fluid" alt="Photo de profil" src="/seconnecter/img/user-icon.png"
+                     height="75" width="75">
+                  <a href="/pages/clientlog.html">client</a>
+               </div>
+            </div>
+
+
+         </form>
+      </div>
+      <div class="form-container seconnecter-container">
+         <div class="center">
             <div class="container">
                <label class="close-btn "></label>
                <div class="text">
                   se connecter
                </div>
-               <form >
+               <form>
                   <div class="data">
                      <label>Email </label>
                      <input type="text" required>
@@ -55,25 +57,26 @@
                   <div class="btn">
                      <button type="submit">se connecter</button>
                   </div>
-                  
-                  </div>
-               </form>
+
+            </div>
+            </form>
+         </div>
+      </div>
+      <div class="overlay-container">
+         <div class="overlay">
+            <div class="overlay-panel overlay-left">
+               <h1>Déjà inscrit?</h1>
+               <button class="ghost" id="seconnecter">se connecter</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+               <h1>Vous n'aviez pas de compte ?</h1>
+
+               <button class="ghost" id="sinscrire">s'inscrire</button>
             </div>
          </div>
-    <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                   <h1>Déjà inscrit?</h1> 
-                  <button class="ghost" id="seconnecter">se connecter</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Vous n'aviez pas de compte ?</h1>
-                
-                    <button class="ghost" id="sinscrire">s'inscrire</button>
-                </div>
-            </div>
-        </div> 
-</div>
-<script src="js/control.js"></script>
+      </div>
+   </div>
+   <script src="js/control.js"></script>
 </body>
+
 </html>
