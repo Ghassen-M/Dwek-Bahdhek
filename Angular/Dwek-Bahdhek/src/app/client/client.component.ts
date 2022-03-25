@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-client',
@@ -12,13 +12,16 @@ export class ClientComponent implements OnInit {
   data = { nom: "Flen Fouleni", dateN: "2000-01-01", sexe: "homme", email: "flenfouleni@gmail.com", num: "99999999", adr: "5 rue nahj, Ville" };
 
   modifForm = new FormGroup({
-    nom: new FormControl(''),
-    dateN: new FormControl(''),
-    sexe: new FormControl(''),
-    email: new FormControl(''),
-    num: new FormControl(''),
-    adr: new FormControl(''),
+    nom: new FormControl(this.data.nom, Validators.required),
+    dateN: new FormControl(this.data.dateN),
+    sexe: new FormControl(this.data.sexe),
+    email: new FormControl(this.data.email),
+    num: new FormControl(this.data.num),
+    adr: new FormControl(this.data.adr),
   });
+
+  get f() { return this.modifForm.controls; }
+
 
   isModif = false;
   constructor() { }

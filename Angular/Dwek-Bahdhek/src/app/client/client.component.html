@@ -18,7 +18,7 @@
             <button *ngIf="!isModif" (click)="onModif()" type=" button" class="rounded-pill btn leftButton">
                 modifier
             </button>
-            <button *ngIf="isModif" (click)="onSubmit()" type=" button" class="rounded-pill btn leftButton">
+            <button *ngIf="isModif" (click)="onSubmit()" type="submit" class="rounded-pill btn leftButton">
                 confirmer
             </button>
             <button (click)="onSuppr()" type=" button" id="i2" class="rounded-pill btn btn-danger">supprimer</button>
@@ -33,7 +33,7 @@
                     <div class="col-4 ">
                         <h6>Nom d'utilisateur</h6>
                     </div>
-                    <div id="noun" class="col-4 offset-4">
+                    <div class="col-4 offset-4">
                         <p>{{data.nom}}</p>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                     <div class="col-4 ">
                         <h6>Date de naissance</h6>
                     </div>
-                    <div id="age" class="col-4 offset-4">
+                    <div class="col-4 offset-4">
                         <p>{{data.dateN}}</p>
                     </div>
                 </div>
@@ -49,15 +49,15 @@
                     <div class="col-4 ">
                         <h6>Sexe</h6>
                     </div>
-                    <div id="sex" class="col-4 offset-4">
-                        <p>Homme</p>
+                    <div class="col-4 offset-4">
+                        <p>{{data.sexe}}</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-4">
                         <h6>Email</h6>
                     </div>
-                    <div id="email" class="col-4 offset-4">
+                    <div class="col-4 offset-4">
                         <p>{{data.email}}</p>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                     <div class="col-4">
                         <h6>Numéro de téléphone</h6>
                     </div>
-                    <div id="number" class="col-4 offset-4">
+                    <div class="col-4 offset-4">
                         <p>{{data.num}}</p>
                     </div>
                 </div>
@@ -73,19 +73,28 @@
                     <div class="col-4">
                         <h6>Adresse</h6>
                     </div>
-                    <div id="address" class="col-4 offset-4">
+                    <div class="col-4 offset-4">
                         <p>{{data.adr}}</p>
                     </div>
                 </div>
             </div>
             <div class="col-8 offset-2" *ngIf="isModif">
                 <form action="#" [formGroup]="modifForm" (ngSubmit)="onSubmit()">
-                    <div class=" row">
-                        <div class="col-4 ">
-                            <h6>Nom d'utilisateur</h6>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="row">
+                                <h6>Nom d'utilisateur</h6>
+                            </div>
+                            <div class="row">
+                                <h6 *ngIf="f['nom']?.invalid" id="nom" class="text-danger">
+                                    Insérer un
+                                    nom</h6>
+                            </div>
+
+
                         </div>
                         <div id="noun" class="col-4 offset-4">
-                            <input type="text" id="in1" formControlName="nom" class="form-control">
+                            <input type="text" formControlName="nom" class="form-control">
                         </div>
                     </div>
                     <div class="row">
@@ -93,7 +102,7 @@
                             <h6>Date de naissance</h6>
                         </div>
                         <div id="age" class="col-4 offset-4">
-                            <input type="date" id="in2" formControlName="dateN" class="form-control">
+                            <input type="date" formControlName="dateN" class="form-control">
                         </div>
                     </div>
                     <div class="row">
@@ -111,7 +120,7 @@
                             <h6>Email</h6>
                         </div>
                         <div id="email" class="col-4 offset-4">
-                            <input type="email" id="in4" formControlName="email" class="form-control">
+                            <input type="email" formControlName="email" class="form-control">
                         </div>
                     </div>
                     <div class=" row">
@@ -119,7 +128,7 @@
                             <h6>Numéro de téléphone</h6>
                         </div>
                         <div id="number" class="col-4 offset-4">
-                            <input type="number" id="in5" formControlName="num" class="form-control">
+                            <input type="number" formControlName="num" class="form-control">
                         </div>
                     </div>
                     <div class="row">
@@ -127,7 +136,7 @@
                             <h6>Adresse</h6>
                         </div>
                         <div id="address" class="col-4 offset-4">
-                            <input type="text" id="in6" formControlName="adr" class="form-control">
+                            <input type="text" formControlName="adr" class="form-control">
                         </div>
                     </div>
                 </form>
