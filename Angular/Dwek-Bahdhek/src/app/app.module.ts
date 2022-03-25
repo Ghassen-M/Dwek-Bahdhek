@@ -7,13 +7,19 @@ import { LoginComponent } from './login/login.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClientComponent } from './client/client.component';
+import { MedecinComponent } from './medecin/medecin.component';
+import { PharmacienComponent } from './pharmacien/pharmacien.component';
+import { PharmacieComponent } from './pharmacie/pharmacie.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ClientComponent
+    ClientComponent,
+    MedecinComponent,
+    PharmacienComponent,
+    PharmacieComponent
   ],
   imports: [
     BrowserModule,

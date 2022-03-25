@@ -93,7 +93,7 @@
 
 
                         </div>
-                        <div class="col-4 offset-4">
+                        <div id="noun" class="col-4 offset-4">
                             <input type="text" formControlName="nom" class="form-control">
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                         <div class="col-4 ">
                             <h6>Date de naissance</h6>
                         </div>
-                        <div class="col-4 offset-4">
+                        <div id="age" class="col-4 offset-4">
                             <input type="date" formControlName="dateN" class="form-control">
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                         <div class="col-4 ">
                             <h6>Sexe</h6>
                         </div>
-                        <div class="col-4 offset-4">
+                        <div id="sex" class="col-4 offset-4">
                             <select formControlName="sexe" class="form-select form-select-sm">
                                 <option *ngFor="let s of sexe" [ngValue]="s">{{s}}</option>
                             </select>
@@ -119,7 +119,7 @@
                         <div class="col-4">
                             <h6>Email</h6>
                         </div>
-                        <div class="col-4 offset-4">
+                        <div id="email" class="col-4 offset-4">
                             <input type="email" formControlName="email" class="form-control">
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                         <div class="col-4">
                             <h6>Numéro de téléphone</h6>
                         </div>
-                        <div class="col-4 offset-4">
+                        <div id="number" class="col-4 offset-4">
                             <input type="number" formControlName="num" class="form-control">
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                         <div class="col-4">
                             <h6>Adresse</h6>
                         </div>
-                        <div class="col-4 offset-4">
+                        <div id="address" class="col-4 offset-4">
                             <input type="text" formControlName="adr" class="form-control">
                         </div>
                     </div>
