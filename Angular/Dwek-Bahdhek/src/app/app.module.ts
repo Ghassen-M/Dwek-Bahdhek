@@ -10,6 +10,8 @@ import { ClientComponent } from './client/client.component';
 import { MedecinComponent } from './medecin/medecin.component';
 import { PharmacienComponent } from './pharmacien/pharmacien.component';
 import { PharmacieComponent } from './pharmacie/pharmacie.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProposComponent } from './propos/propos.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { PharmacieComponent } from './pharmacie/pharmacie.component';
     ClientComponent,
     MedecinComponent,
     PharmacienComponent,
-    PharmacieComponent
+    PharmacieComponent,
+    ContactComponent,
+    ProposComponent
   ],
   imports: [
     BrowserModule,
