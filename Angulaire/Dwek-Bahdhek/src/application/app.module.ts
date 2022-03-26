@@ -10,7 +10,13 @@ import { ClientComponent } from './client/client.component';
 import { MedecinComponent } from './medecin/medecin.component';
 import { PharmacienComponent } from './pharmacien/pharmacien.component';
 import { PharmacieComponent } from './pharmacie/pharmacie.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { BarreRechercheComponent } from './barre-recherche/barre-recherche.component';
+import { SigninclientComponent } from './signinclient/signinclient.component';
+import { SigninmedecinComponent } from './signinmedecin/signinmedecin.component';
+import { SigninpharmacienComponent } from './signinpharmacien/signinpharmacien.component';
 
 @NgModule({
   declarations: [
@@ -19,9 +25,17 @@ import { PharmacieComponent } from './pharmacie/pharmacie.component';
     ClientComponent,
     MedecinComponent,
     PharmacienComponent,
-    PharmacieComponent
+    PharmacieComponent,
+    NavbarComponent,
+    FooterComponent,
+    BarreRechercheComponent,
+    SigninclientComponent,
+    SigninmedecinComponent,
+    SigninpharmacienComponent
   ],
-  imports: [
+  imports: [ 
+      FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule
