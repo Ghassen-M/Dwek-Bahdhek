@@ -1,0 +1,64 @@
+<div class="container" >
+    <form [formGroup]="signinclient" (ngSubmit)="onSubmit()">
+      <div class="row ">
+        <h4>créer un compte utilisateur</h4> 
+          <div class=" signinclient col-6 ">
+              <label id="n">nom</label>
+              <input type="text" id="nom" class="form-control"formControlName="nom" placeholder=" nom"  required>
+              <span class="text-danger"
+              *ngIf="f['nom']?.invalid" id="nom">
+                verifier le nom
+          </span>
+         
+         
+            </div>
+          
+          <div class="col-6">
+              <label id="pn">prenom</label>
+              <input type="text"id="prenom"class="form-control" formControlName="prenom"placeholder="prenom" required>
+              <span class="text-danger"
+              *ngIf="f['prenom']?.invalid" id="prenom">
+              verifier le prenom
+          </span>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-6">
+              <label id="mail">email</label> 
+              <input type="email"id="email"class="form-control" formControlName="email"placeholder="Email" required>
+              <span class="text-danger"
+              *ngIf="f['email']?.invalid " id="email">
+              verifier l'email </span>
+          </div>
+          <div class="col-6">
+              <label id="mp">mot de passe</label>
+              <input type="password"  name="mdp" id="mdp" class="form-control" formControlName="mdp"placeholder="mot de passe " required>
+              <span class="text-danger"
+              *ngIf="f['mdp']?.invalid " id="mdp">
+              verifier le mot de passe </span>
+          
+            </div>
+      </div>
+      <div class="row">
+          <div class="col-6">
+              <label id="d">date de naissance</label> 
+            <input id="dn"  name="dn"class="form-control"formControlName="dn"type="date">
+            <span class="text-danger"
+              *ngIf="f['mdp']?.invalid " id="email">
+              verifier le dn </span>
+          </div>
+          <div class="col-6">
+              <label id="se">sexe</label>
+              <input type="radio"  class="form-control" name="sexe"formControlName="femmme" class=" sexe femme" id="sexe-femme" >
+              <label for="sexe-femme">femme</label>
+              <input type="radio" name="homme" name="sexe"  formControlName="homme"class="form-control"class="  sexe homme" id="sexe-homme" >
+              <label for="sexe-homme">homme</label>
+          </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button id="b1" type=" submit" (click)="onSubmit" class="btn">
+            envoyer
+        </button>               
+      </div>
+  </form>
+</div>
