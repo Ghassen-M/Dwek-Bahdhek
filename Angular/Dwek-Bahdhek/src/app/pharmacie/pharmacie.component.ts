@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pharmacie.component.scss']
 })
 export class PharmacieComponent implements OnInit {
-
+  data = {};
   constructor() { }
 
   ngOnInit(): void {
