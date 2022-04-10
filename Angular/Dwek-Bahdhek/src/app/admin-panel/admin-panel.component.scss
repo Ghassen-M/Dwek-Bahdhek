@@ -1,0 +1,15 @@
+.table   {
+    text-align: center;
+    } 
+button{ border: none; background: none; outline: none;}
+
+.table > :not(:first-child) {
+    border-top: 0;
+}
+
+td {
+    font-size: 15px;
+    line-height: 1.4;
+    color: rgb(158, 147, 147);
+    font-weight: 500;
+}
