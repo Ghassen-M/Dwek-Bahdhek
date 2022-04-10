@@ -12,6 +12,8 @@ import { PharmacienComponent } from './pharmacien/pharmacien.component';
 import { PharmacieComponent } from './pharmacie/pharmacie.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProposComponent } from './propos/propos.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { ProposComponent } from './propos/propos.component';
     PharmacienComponent,
     PharmacieComponent,
     ContactComponent,
-    ProposComponent
+    ProposComponent,
+    AdminPanelComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
