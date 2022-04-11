@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favicon.ico">
+<link rel="icon" type="image/png" href="./assets/img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<title>File d'actualités</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,600,700" rel="stylesheet">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<!-- Main CSS -->
+<link href="./assets/css/main.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<!--------------------------------------
+NAVBAR
+--------------------------------------->
+<nav class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
+<div class="container">
+	<a class="navbar-brand" href="./index.html"><strong>DWKEK BAHDHEK</strong></a>
+	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="navbar-collapse collapse" id="navbarColor02" style="">
+		<ul class="navbar-nav mr-auto d-flex align-items-center">
+			<li class="nav-item">
+			<a class="nav-link" href="./index.html">Introduction <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="./index.html">Catégories </a>
+				</li>
+			<li class="nav-item">
+			<a class="nav-link" href="./article.html">Collections</a>
+			</li>            
+			<li class="nav-item">
+			<a class="nav-link" href="./about.html">A propos</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="C:\Users\DELL\Desktop\dwek bahdhek\connecter.html">Se connecter <span class="badge badge-secondary">docs</span></a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto d-flex align-items-center">
+			<li class="nav-item highlight">
+			<a class="nav-link" href="https://www.wowthemes.net/mundana-free-html-bootstrap-template/">Page d'acceuil</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav>
+<!-- End Navbar -->
+    
+    
+<!--------------------------------------
+HEADER
+--------------------------------------->
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-inner">
+	  <div class="carousel-item active" data-bs-interval="10000">
+		<img src="C:\Users\DELL\Desktop\dwek bahdhek\images\m2.jpg" class="d-block w-100" >
+	  </div>
+	  <div class="carousel-item" data-bs-interval="2000">
+		<img src="C:\Users\DELL\Desktop\dwek bahdhek\images\de.png" class="d-block w-100" >
+	  </div>
+	  <div class="carousel-item">
+		<img src="C:\Users\DELL\Desktop\dwek bahdhek\images\santé2.jpeg" class="d-block w-100" >
+	  </div>
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Next</span>
+	</button>
+  </div>
+
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Next</span>
+	</button>
+  </div>
+<div class="container">
+	<div class="jumbotron jumbotron-fluid mb-3 pt-0 pb-0 bg-lightblue position-relative">
+		<div class="pl-4 pr-0 h-100 tofront">
+			<div class="row justify-content-between">
+				<div class="col-md-6 pt-6 pb-6 align-self-center">
+					<h1 class="secondfont mb-3 font-weight-bold">Nous prenons soin de votre santé</h1>
+					<p class="mb-3">
+						Vous pouvez consulter des publications gérées par des medecins, aussi des articles médicaux et des conseils pour améliorer votre santé
+					</p>
+					<a href="./article.html" class="btn btn-dark">Afficher plus</a>
+				</div>
+				
+				<div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover; float:right;"> <img src="C:\Users\DELL\Desktop\dwek bahdhek\images\santé.png" width="315" height="315" /></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Header -->
+    
+    
+<!--------------------------------------
+MAIN
+--------------------------------------->
+    
+<div class="container pt-4 pb-4">
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="card border-0 mb-4 box-shadow h-xl-300">              
+                <div style="background-image: url(./assets/img/demo/1.jpg); height: 150px;    background-size: cover;    background-repeat: no-repeat;"></div>               
+				<div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
+					<h2 class="h4 font-weight-bold">
+					<a class="text-dark" href="./article.html">Qu’est-ce que le diabète gestationnel ?</a>
+					</h2>
+					<p class="card-text">
+						La grossesse est un moment privilégié mais c’est aussi un moment où la santé doit être particulièrement contrôlée.
+						 Le taux de glucose dans le sang, notamment, est à surveiller, car un diabète, dit gestationnel, peut survenir chez la femme enceinte
+					</p>
+					<div>
+						<small class="d-block"><a class="text-muted" href="C:\Users\DELL\Desktop\dwek bahdhek\conversation\html\chat3.html">CATHERINE CHAUSSERAY (ANPM-FRANCE MUTUALITÉ)</a></small>
+						<small class="text-muted">12 Dec &middot; 5 min lecture</small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="flex-md-row mb-4 box-shadow h-xl-300">
+				<div class="mb-3 d-flex align-items-center">
+					<img height="80" src="./assets/img/demo/blog4.jpg">
+					<div class="pl-3">
+						<h2 class="mb-2 h6 font-weight-bold">
+						<a class="text-dark" href="./article.html">Nasa's IceSat space laser makes height maps of Earth</a>
+						</h2>
+						<div class="card-text text-muted small">
+							 Jake Bittle in LOVE/HATE
+						</div>
+						<small class="text-muted">Dec 12 &middot; 5 min read</small>
+					</div>
+				</div>
+				<div class="mb-3 d-flex align-items-center">
+					<img height="80" src="./assets/img/demo/blog5.jpg">
+					<div class="pl-3">
+						<h2 class="mb-2 h6 font-weight-bold">
+						<a class="text-dark" href="./article.html">Underwater museum brings hope to Lake Titicaca</a>
+						</h2>
+						<div class="card-text text-muted small">
+							 Jake Bittle in LOVE/HATE
+						</div>
+						<small class="text-muted">14 Jan &middot; 5 min lecture</small>
+					</div>
+				</div>
+				<div class="mb-3 d-flex align-items-center">
+					<img height="80" src="./assets/img/demo/blog6.jpg">
+					<div class="pl-3">
+						<h2 class="mb-2 h6 font-weight-bold">
+						<a class="text-dark" href="./article.html">Sun-skimming probe starts calling home</a>
+						</h2>
+						<div class="card-text text-muted small">
+							 Jake Bittle in LOVE/HATE
+						</div>
+						<small class="text-muted">25 Mars &middot; 5 min lecture</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+    
+<div class="container">
+	<div class="row justify-content-between">
+		<div class="col-md-8">
+			<h5 class="font-weight-bold spanborder"><span>Tous les articles</span></h5>
+			<div class="mb-3 d-flex justify-content-between">
+				<div class="pr-3">
+					<h2 class="mb-1 h4 font-weight-bold">
+					<a class="text-dark" href="./article.html">Nearly 200 Great Barrier Reef coral species also live in the deep sea</a>
+					</h2>
+					<p>
+						There are more coral species lurking in the deep ocean that previously thought.
+					</p>
+					<div class="card-text text-muted small">
+						 Jake Bittle in SCIENCE
+					</div>
+					<small class="text-muted">Dec 12 &middot; 5 min read</small>
+				</div>
+				<img height="120" src="./assets/img/demo/blog8.jpg">
+			</div>
+			<div class="mb-3 d-flex justify-content-between">
+				<div class="pr-3">
+					<h2 class="mb-1 h4 font-weight-bold">
+					<a class="text-dark" href="./article.html">East Antarctica's glaciers are stirring</a>
+					</h2>
+					<p>
+						Nasa says it has detected the first signs of significant melting in a swathe of glaciers in East Antarctica.
+					</p>
+					<div class="card-text text-muted small">
+						 Jake Bittle in SCIENCE
+					</div>
+					<small class="text-muted">18 Fev &middot; 5 min lecture</small>
+				</div>
+				<img height="120" src="./assets/img/demo/1.jpg">
+			</div>
+			<div class="mb-3 d-flex justify-content-between">
+				<div class="pr-3">
+					<h2 class="mb-1 h4 font-weight-bold">
+					<a class="text-dark" href="./article.html">50 years ago, armadillos hinted that DNA wasn’t destiny</a>
+					</h2>
+					<p>
+						Nasa says it has detected the first signs of significant melting in a swathe of glaciers in East Antarctica.
+					</p>
+					<div class="card-text text-muted small">
+						 Jake Bittle in SCIENCE
+					</div>
+					<small class="text-muted">Dec 12 &middot; 5 min read</small>
+				</div>
+				<img height="120" src="./assets/img/demo/5.jpg">
+			</div>
+		</div>
+		<div class="col-md-4 pl-4">
+            <h5 class="font-weight-bold spanborder"><span>Populaire</span></h5>
+			<ol class="list-featured">
+				<li>
+				<span>
+				<h6 class="font-weight-bold">
+				<a href="./article.html" class="text-dark">Did Supernovae Kill Off Large Ocean Animals?</a>
+				</h6>
+				<p class="text-muted">
+					Jake Bittle in SCIENCE
+				</p>
+				</span>
+				</li>
+				<li>
+				<span>
+				<h6 class="font-weight-bold">
+				<a href="./article.html" class="text-dark">Humans Reversing Climate Clock: 50 Million Years</a>
+				</h6>
+				<p class="text-muted">
+					Jake Bittle in SCIENCE
+				</p>
+				</span>
+				</li>
+				<li>
+				<span>
+				<h6 class="font-weight-bold">
+				<a href="./article.html" class="text-dark">Unprecedented Views of the Birth of Planets</a>
+				</h6>
+				<p class="text-muted">
+					Jake Bittle in SCIENCE
+				</p>
+				</span>
+				</li>
+				<li>
+				<span>
+				<h6 class="font-weight-bold">
+				<a href="./article.html" class="text-dark">Effective New Target for Mood-Boosting Brain Stimulation Found</a>
+				</h6>
+				<p class="text-muted">
+					Jake Bittle in SCIENCE
+				</p>
+				</span>
+				</li>
+			</ol>
+		</div>
+	</div>
+</div>
+    
+<!--------------------------------------
+FOOTER
+--------------------------------------->
+<div class="bg-dark">
+<div class="container ">
+
+	<footer class="py-5">
+	  <div class="row">
+		
+		  <h5>Section</h5>
+		  <ul class="nav flex-column">
+			
+			<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Page d'acceuil</a></li>
+		
+			<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">A propos</a></li>
+		  </ul>
+	
+  
+  
+	
+  
+		<div class="col-4 offset-1">
+		  <form>
+			<h5>Sinscrire</h5>
+			
+			<div class="d-flex w-100 gap-2">
+			  <label for="newsletter1" class="visually-hidden">Adresse email</label>
+			  <input id="newsletter1" type="text" class="form-control" placeholder="Adresse email">
+			  <button class="btn btn-success" type="button">S'inscrire</button>
+			</div>
+		  </form>
+		</div>
+	  </div>
+  
+	  <div class="d-flex justify-content-between py-4 my-4 border-top">
+		<p style="color:white;">&copy; 2022 DWEK BAHDHEK, Tout droits réservés.</p>
+		<ul class="list-unstyled d-flex">
+		  <li class="ms-3"><a class="link-white" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+		  <li class="ms-3"><a class="link-white" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+		  <li class="ms-3"><a class="link-white" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+		</ul>
+	  </div>
+	</footer>
+  </div>
+</div>
+<!-- End Footer -->
+
+
+</body>
+</html>
