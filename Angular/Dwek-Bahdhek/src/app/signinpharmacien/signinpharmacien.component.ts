@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder }  from '@angular/forms';
+import { FormGroup, FormControl, Validators }  from '@angular/forms';
 
 
 @Component({
@@ -9,30 +9,34 @@ import { FormGroup, FormControl, Validators, FormBuilder }  from '@angular/forms
 })
 export class SigninpharmacienComponent implements OnInit {
 
-  signinpharmacie!: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  title="créer un compte pharmacien"
+  sexe = ["homme", "femme"];
+  data = { nom:"",prenom:"",cin:"",email:"",mdp:"", dn: "", sexe:"", tel:"",  lr:""};
+  
+  pharmacien = new FormGroup({
+    nom: new FormControl(this.data.nom, [Validators.required, Validators.pattern("[A-Za-z]*")]),
+    prenom: new FormControl(this.data.prenom, [Validators.required, Validators.pattern("[A-Za-z]*")]),
+    cin: new FormControl(this.data.cin, [Validators.required, Validators.pattern("^[0-9]{8}$")]),
+    email: new FormControl(this.data.email, [Validators.required, Validators.email]),
+    mdp:new FormControl(this.data.mdp, [Validators.required, Validators.minLength(6)]),
+    dn: new FormControl(this.data.dn, [Validators.required]),
+    sexe: new FormControl(this.data.sexe, [Validators.required]),
+    tel: new FormControl(this.data.tel, [Validators.required, Validators.pattern("^[0-9]{8}$")]),
+    lr: new FormControl(this.data.lr, [Validators.required]),
+
+  })
 
   ngOnInit(): void {
-    this.signinpharmacie = this.fb.group({
-      nom: ['', Validators.required,Validators.pattern('A-Za-z')],
-      prenom: ['', Validators.required,Validators.pattern('A-Za-z')],
-      email: ['', [Validators.required, Validators.email]],
-      mdp: ['', [Validators.required, Validators.minLength(6)]],
-      cin: ['', [Validators.required, Validators.maxLength(8),Validators.pattern('0-9')]],
-      tel: ['', [Validators.required, Validators.maxLength(8),Validators.pattern('0-9')]],
-      lr: ['', [Validators.required,]],
-      dn: ['', Validators.required],
-          });
-          
+    
   }
   get f() {
-    return this.signinpharmacie.controls;
+    return this.pharmacien.controls;
   }
 
   onSubmit() {
-    if (this.signinpharmacie.valid) {
+    if (this.pharmacien.valid) {
       alert('valide ');
-      console.table(this.signinpharmacie.value);
+      console.table(this.pharmacien.value);
     }
   }
 }

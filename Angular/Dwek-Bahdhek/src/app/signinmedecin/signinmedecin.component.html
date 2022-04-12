@@ -45,7 +45,7 @@
                <label id="d">date de naissance</label> 
                <input id="dn"type="date"class="form-control" formControlName="dn">
                <span class="text-danger"
-           *ngIf="f['dn']?.invalid " >
+           *ngIf="f['dn']?.invalid && f['dn']?.touched" >
            verifier le dn </span>
            </div>
        </div>
@@ -56,16 +56,19 @@
                <label for="sexe-femme">femme</label>
                <input type="radio" name="sexe" class="  sexe homme" id="sexe-homme" >
                <label for="sexe-homme">homme</label>
-            </div>
+               <span class="text-danger"
+                *ngIf="f['sexe']?.invalid && f['sexe']?.touched" >
+                verifier le sexe </span>
+           </div>
            <div class="col-6">
              <label id="tlp">numéro de téléphone</label>
              <input type="text" id="tel"class="form-control" placeholder=" numéro de téléphone" formControlName="tel"  >
              <span class="text-danger"
-                 *ngIf="f['tel']?.invalid" >
-                 tel doit contenir 8 chiffre
+                 *ngIf="f['tel']?.invalid && f['tel']?.touched" >
+                 tel doit contenir 8 chiffres
              </span>
            </div>
-        </div>
+          </div>
          <div class="row">
            <div class="col-6">
            <label for="formFile" class="form-label">Copie PDF des diplômes et des documents vérifiant votre identité (dans un seul fichier)</label>
@@ -77,7 +80,7 @@
                    <select formControlName="specialite" class="form-select form-select-sm">
                     <option *ngFor="let s of specialite" [ngValue]="s">{{s}}</option>
                  </select>
-                 <span *ngIf="f['specialite']?.invalid" class="text-danger">
+                 <span *ngIf="f['specialite']?.invalid " class="text-danger">
                   Insérer une
                   spécialité valide </span>
              </div>
