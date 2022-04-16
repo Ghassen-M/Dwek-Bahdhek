@@ -13,6 +13,23 @@
 
 <body>
   <div class="container">
+
+    <div class="row">
+      <div class="col-2 mt-3">
+         <form action="index.php" class="form-group mt-3" method="POST" enctype="multipart/form-data" >
+          <label for="">Date d'ajout :</label>
+               <input type="date" class="form-control mt-3" name="profile" >
+             <label for="">Produit :</label>
+             <input type="text" class="form-control mt-3" name="produit" required>
+             <label for="">Description :</label>
+             <input type="text" class="form-control mt-3" name="description" >
+             <label for="">Quantite :</label>
+             <input type="text" class="form-control mt-3" name="quantite" required>
+             <button type="submit" class="btn btn-primary mt-3" name="ajouter">Enregistrer</button>
+         </form>
+      </div>
+
+      <div class="col-10 mt-3">
 	<table>
 		<thead>
 			<tr>
@@ -89,7 +106,7 @@
 		</tbody>
 	</table>
 </div>
-  
+    </div> 
   
 </body>
 </html>
