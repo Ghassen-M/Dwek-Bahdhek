@@ -15,6 +15,13 @@ import { ContactComponent } from './contact/contact.component';
 import { ProposComponent } from './propos/propos.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { AboutComponent } from './about/about.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { BarreRechercheComponent } from './barre-recherche/barre-recherche.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SigninclientComponent } from './signinclient/signinclient.component';
+import { SigninmedecinComponent } from './signinmedecin/signinmedecin.component';
+import { SigninpharmacienComponent } from './signinpharmacien/signinpharmacien.component';
 
 
 @NgModule({
@@ -28,7 +35,14 @@ import { AboutComponent } from './about/about.component';
     ContactComponent,
     ProposComponent,
     AdminPanelComponent,
-    AboutComponent
+    AboutComponent,
+    AccueilComponent,
+    BarreRechercheComponent,
+    FooterComponent,
+    NavbarComponent,
+    SigninclientComponent,
+    SigninmedecinComponent,
+    SigninpharmacienComponent
   ],
   imports: [
     BrowserModule,
