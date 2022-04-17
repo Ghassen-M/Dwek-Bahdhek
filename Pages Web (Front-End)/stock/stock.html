@@ -17,38 +17,41 @@
     <div class="row">
       <div class="col-2 mt-3">
          <form action="index.php" class="form-group mt-3" method="POST" enctype="multipart/form-data" >
-          <label for="">Date d'ajout :</label>
-               <input type="date" class="form-control mt-3" name="profile" >
-             <label for="">Produit :</label>
-             <input type="text" class="form-control mt-3" name="produit" required>
-             <label for="">Description :</label>
-             <input type="text" class="form-control mt-3" name="description" >
+          <label for="">Nom Commercial</label>
+               <input type="text" class="form-control mt-3" name="nom" >
+             <label for="">laboratoire</label>
+             <input type="text" class="form-control mt-3" name="labo" required>
+             <label for="">dci</label>
+             <input type="text" class="form-control mt-3" name="dci" >
              <label for="">Quantite :</label>
              <input type="text" class="form-control mt-3" name="quantite" required>
              <button type="submit" class="btn btn-primary mt-3" name="ajouter">Enregistrer</button>
-         </form>
+              <button type="submit" class="btn btn-primary mt-3" name="annuler">Annuler</button>
+           </form>
       </div>
 
       <div class="col-10 mt-3">
 	<table>
 		<thead>
 			<tr>
-				<th>Date d'ajout</th>
+				<th>Nom commercial</th>
 				
-				<th>Produit</th>
-				<th>Description</th>
-				<th>Quantité</th>
+				<th>laboratoire</th>
+				<th>dci</th>
+			
                
                 <th> 
-                    
+                    quantite
                 </th>
+                <th></th>
 			</tr>
 		</thead>
 		<tbody>
+      
 			<tr>
-				<td>12/02/2022</td>
-				<td>Doliprane</td>
-				<td></td>
+				<td>doliprane</td>
+				<td> ad1</td>
+				<td>bl</td>
 				
 				<td>
             
@@ -62,26 +65,26 @@
 </td>
 			</tr>
 			<tr>
-				<td>13/02/2022</td>
-				<td>Supradol</td>
-				<td></td>
+				<td>supradol</td>
+				<td>ad2</td>
+				<td>lpoi</td>
 				<td><input type="number" value="78"></td>
 			
            <td>
                     <button class="btn"><i class="fa fa-trash"></i></button></td>
 			</tr>
 			<tr>
-				<td>15/02/2022</td>
-				<td>Crème hydratente</td>
-				<td></td>
+				<td>crème hydratante</td>
+				<td>ad3</td>
+				<td>sxdqs</td>
 				<td><input type="number" value="87"></td>
 			<td>
                     <button class="btn"><i class="fa fa-trash"></i></button></td>
 			</tr>
 			<tr>
-				<td>20/02/2022</td>
-				<td>Mucosol</td>
-				<td></td>
+				<td>mucosol</td>
+				<td>ad4</td>
+				<td>xqs</td>
 				<td>
           <input type="number" value="12">
         </td>
@@ -90,9 +93,9 @@
                     <button class="btn"><i class="fa fa-trash"></i> </button></td>
 			</tr>
 			<tr>
-				<td>01/03/2022</td>
 				<td>Primperan</td>
-				<td></td>
+				<td>ad5</td>
+				<td>sx</td>
 				<td>
           <input type="number" value="100">
 
