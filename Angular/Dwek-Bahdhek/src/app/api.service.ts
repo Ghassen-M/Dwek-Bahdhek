@@ -19,10 +19,10 @@ export class ApiService {
     return this.http.put<any[]>('http://localhost/dwek_bahdhek/acceptCompteAttente.php?email=' + email + '&mdp=' + mdp, emailJson);
   }
   majCompte(data: any) {
-    return this.http.put<any[]>('http://localhost/dwek_bahdhek/majCompteClient.php?email=' + data.email, data);
+    return this.http.put<any[]>('http://localhost/dwek_bahdhek/majCompte.php?email=' + data.email, data);
   }
   getCompte(): Observable<any> {
-    return this.http.get<any[]>('http://localhost/dwek_bahdhek/Compte.php?email=' + 'khouloudtrabelsi@gmail.com');
+    return this.http.get<any[]>('http://localhost/dwek_bahdhek/Compte.php?email=' + 'khouloudtrabelsi2@gmail.com');
   }
   deleteCompte(email: String) {
     return this.http.delete<any[]>('http://localhost/dwek_bahdhek/deleteCompte.php?email=' + email);

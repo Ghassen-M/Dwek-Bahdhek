@@ -73,6 +73,6 @@ export class ClientComponent implements OnInit {
 
   onSuppr(): void {
     this.api.deleteCompte(this.modifForm.value.email).subscribe();
-    this.router.navigateByUrl('/login');
+    //this.router.navigateByUrl('/login');
   }
 }

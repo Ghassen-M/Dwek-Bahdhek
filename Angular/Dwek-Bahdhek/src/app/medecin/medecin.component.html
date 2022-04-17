@@ -99,19 +99,6 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-4 ">
-                            <h6>Spécialité</h6>
-                            <h6 *ngIf="f['specialite']?.invalid" class="text-danger">
-                                Insérer une
-                                spécialité valide</h6>
-                        </div>
-                        <div class="col-4 offset-4">
-                            <select formControlName="specialite" class="form-select form-select-sm">
-                                <option *ngFor="let s of specialite" [ngValue]="s">{{s}}</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
                         <div class="col-4">
                             <h6>Adresse</h6>
                             <h6 *ngIf="f['adr']?.invalid" class="text-danger">
