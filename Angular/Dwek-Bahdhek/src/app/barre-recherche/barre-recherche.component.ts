@@ -11,7 +11,6 @@ export class BarreRechercheComponent implements OnInit {
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.api.getAdr().subscribe((data) => console.log(data));
   }
 
 }

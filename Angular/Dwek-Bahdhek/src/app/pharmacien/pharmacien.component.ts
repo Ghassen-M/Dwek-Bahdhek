@@ -13,6 +13,8 @@ export class PharmacienComponent implements OnInit {
 
   dataRepresentation: any[] = [];
 
+  ancienEmail='';
+  
   modifForm = new FormGroup({
     username: new FormControl('', [Validators.required]),
     dateN: new FormControl('', [Validators.required]),
@@ -52,12 +54,14 @@ export class PharmacienComponent implements OnInit {
       (data) => {
         this.modifForm.patchValue(data);
       });
+      this.ancienEmail=this.modifForm.value.email;
+
   }
 
   onSubmit(): void {
     this.isModif = !this.isModif;
 
-    this.api.majCompte(this.modifForm.value).subscribe((data) => {
+    this.api.majCompte(this.ancienEmail,this.modifForm.value).subscribe((data) => {
       this.dataRepresentation = [
         ["Nom d'utilisateur", this.modifForm.value.username],
         ["Date de naissance", this.modifForm.value.dateN],

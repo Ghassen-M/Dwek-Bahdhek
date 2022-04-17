@@ -30,86 +30,59 @@
                 <form action="#" [formGroup]="modifForm" (ngSubmit)="onSubmit()">
                     <div class="row">
                         <div class="col-4">
-                            <h6>Nom d'utilisateur</h6>
-                            <h6 *ngIf="f['username']?.invalid" class="text-danger">
+                            <h6>Nom pharmacie</h6>
+                            <h6 *ngIf="f['nom_pharmacie']?.invalid" class="text-danger">
                                 Insérer un
                                 nom valide</h6>
                         </div>
                         <div class="col-4 offset-4">
-                            <input type="text" formControlName="username" class="form-control">
+                            <input type="text" formControlName="nom_pharmacie" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-4 ">
-                            <h6>Date de naissance</h6>
-                            <h6 *ngIf="f['dateN']?.invalid" class="text-danger">
+                            <h6>Adresse pharmacie</h6>
+                            <h6 *ngIf="f['adr_pharmacie']?.invalid" class="text-danger">
                                 Insérer une
-                                date valide</h6>
+                                adresse valide</h6>
                         </div>
                         <div class="col-4 offset-4">
-                            <input type="date" formControlName="dateN" class="form-control">
+                            <input type="text" formControlName="adr_pharmacie" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-4 ">
-                            <h6>Sexe</h6>
-                            <h6 *ngIf="f['sexe']?.invalid" class="text-danger">
+                            <h6>Type pharmcie</h6>
+                            <h6 *ngIf="f['type_pharmacie']?.invalid" class="text-danger">
                                 Insérer un
-                                sexe valide</h6>
+                                type valide</h6>
                         </div>
                         <div class="col-4 offset-4">
-                            <select formControlName="sexe" class="form-select form-select-sm">
-                                <option *ngFor="let s of sexe" [ngValue]="s">{{s}}</option>
+                            <select formControlName="type_pharmacie" class="form-select form-select-sm">
+                                <option *ngFor="let t of type_pharmacie" [ngValue]="t">{{t}}</option>
                             </select>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-4">
-                            <h6>Email</h6>
-                            <h6 *ngIf="f['email']?.invalid" class="text-danger">
+                            <h6>Email pharmacie</h6>
+                            <h6 *ngIf="f['email_pharmacie']?.invalid" class="text-danger">
                                 Insérer un
                                 email valide</h6>
                         </div>
                         <div class="col-4 offset-4">
-                            <input type="email" formControlName="email" class="form-control">
+                            <input type="email" formControlName="email_pharmacie" class="form-control">
                         </div>
                     </div>
                     <div class=" row">
                         <div class="col-4">
-                            <h6>Numéro de téléphone</h6>
-                            <h6 *ngIf="f['tel']?.invalid" class="text-danger">
+                            <h6>Téléphone pharmacie</h6>
+                            <h6 *ngIf="f['tel_pharmacie']?.invalid" class="text-danger">
                                 Insérer un
                                 numéro valide</h6>
                         </div>
                         <div class="col-4 offset-4">
-                            <input type="text" formControlName="tel" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <h6>Adresse</h6>
-                            <h6 *ngIf="f['adr']?.invalid" class="text-danger">
-                                Insérer une
-                                adresse valide</h6>
-                        </div>
-                        <div class="col-4 offset-4">
-                            <input type="text" formControlName="adr" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <h6>Photo du profil</h6>
-                        </div>
-                        <div class="col-4 offset-4">
-                            <input type="text" formControlName="photo" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <h6>Mot de passe</h6>
-                        </div>
-                        <div class="col-4 offset-4">
-                            <input type="password" formControlName="mdp" class="form-control">
+                            <input type="text" formControlName="tel_pharmacie" class="form-control">
                         </div>
                     </div>
                 </form>

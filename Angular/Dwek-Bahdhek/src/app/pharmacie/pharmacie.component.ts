@@ -8,19 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./pharmacie.component.scss']
 })
 export class PharmacieComponent implements OnInit {
-  sexe = ["homme", "femme"];
-
+  type_pharmacie = ["Jour", "Nuit"];
+  ancienAdr="";
   dataRepresentation: any[] = [];
 
   modifForm = new FormGroup({
-    username: new FormControl('', [Validators.required]),
-    dateN: new FormControl('', [Validators.required]),
-    sexe: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    tel: new FormControl('', [Validators.required, Validators.pattern("^[0-9]{8}$")]),
-    adr: new FormControl('', [Validators.required]),
-    photo: new FormControl('', [Validators.required]),
-    mdp: new FormControl('', [Validators.required])
+    nom_pharmacie: new FormControl('', [Validators.required]),
+    adr_pharmacie: new FormControl('', [Validators.required]),
+    type_pharmacie: new FormControl('', [Validators.required]),
+    email_pharmacie: new FormControl('', [Validators.required, Validators.email]),
+    tel_pharmacie: new FormControl('', [Validators.required, Validators.pattern("^[0-9]{8}$")]),
   });
 
   get f() { return this.modifForm.controls; }
@@ -28,39 +25,38 @@ export class PharmacieComponent implements OnInit {
   constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
-    this.api.getCompte().subscribe(
+    this.api.getPharmacie().subscribe(
       (data) => {
-
         this.dataRepresentation = [
-          ["Nom pharmacie", data.username],
-          ["Adresse pharmacie", data.dateN],
-          ["Type Pharmacie", data.sexe],
-          ["Email pharmacie", data.email],
-          ["Téléphone pharmacie", data.tel]
+          ["Nom pharmacie", data.nom_pharmacie],
+          ["Adresse pharmacie", data.adr_pharmacie],
+          ["Type Pharmacie", data.type_pharmacie],
+          ["Email pharmacie", data.email_pharmacie],
+          ["Téléphone pharmacie", data.tel_pharmacie]
         ];
         this.modifForm.patchValue(data);
-
       });
   }
   isModif = false;
   onModif(): void {
     this.isModif = true;
-    this.api.getCompte().subscribe(
+    this.api.getPharmacie().subscribe(
       (data) => {
         this.modifForm.patchValue(data);
       });
+      this.ancienAdr=this.modifForm.value.adr_pharmacie;
+
   }
 
   onSubmit(): void {
     this.isModif = !this.isModif;
-
-    this.api.majCompte(this.modifForm.value).subscribe((data) => {
+    this.api.majPharmacie(this.ancienAdr, this.modifForm.value).subscribe((data) => {
       this.dataRepresentation = [
-        ["Nom pharmacie", this.modifForm.value.username],
-        ["Adresse pharmacie", this.modifForm.value.dateN],
-        ["Type Pharmacie", this.modifForm.value.sexe],
-        ["Email pharmacie", this.modifForm.value.email],
-        ["Téléphone pharmacie", this.modifForm.value.tel]
+        ["Nom pharmacie", this.modifForm.value.nom_pharmacie],
+        ["Adresse pharmacie", this.modifForm.value.adr_pharmacie],
+        ["Type Pharmacie", this.modifForm.value.type_pharmacie],
+        ["Email pharmacie", this.modifForm.value.email_pharmacie],
+        ["Téléphone pharmacie", this.modifForm.value.tel_pharmacie]
       ];
     });
 
