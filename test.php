@@ -1,29 +1,24 @@
 <?php
     require 'connect.php';
-    $postdata=file_get_contents("php://input");
-    if (isset($postdata) && !empty($postdata))
+    $pharmacies=[];
+    $nomC=$_GET['nomC'];
+    $sql="SELECT p.nom_pharmacie,p.type_pharmacie,p.tel_pharmacie,p.adr_pharmacie,m.quantité FROM pharmacie p,médicament m where m.adr_pharmacie=p.adr_pharmacie AND m.nom_commercial='{$nomC}';";
+    if ($result= mysqli_query($con,$sql))
     {
-        $request=json_decode($postdata);
-        $email=mysqli_real_escape_string($con,$request->email);
-        $username=mysqli_real_escape_string($con,$request->username);
-        $dateN=mysqli_real_escape_string($con,$request->dateN);
-        $photo=mysqli_real_escape_string($con,$request->photo);
-        $sexe=mysqli_real_escape_string($con,$request->sexe);
-        $tel=mysqli_real_escape_string($con,$request->tel);
-        $adr=mysqli_real_escape_string($con,$request->adr);
-        $mdp=mysqli_real_escape_string($con,$request->mdp)       
-        
-        
-        $ancienEmail=mysqli_real_escape_string($con,$request->ancienEmail);
-
-     
-        $sql ="UPDATE `compte` SET `email`='$email', `username`='$username',`dateN`= '$dateN', `photo`= '$photo', `sexe`='$sexe', `tel`='$tel',`adr`='$adr',`mdp`='$mdp'  WHERE `email`='$ancienEmail';";
-        if (mysqli_query($con,$sql))
+        $cr=0;
+        while($row=mysqli_fetch_assoc($result))
         {
+            $pharmacies[$cr]['nom_pharmacie']=$row['nom_pharmacie'];
+            $pharmacies[$cr]['type_pharmacie']=$row['type_pharmacie'];
+            $pharmacies[$cr]['tel_pharmacie']=$row['tel_pharmacie'];
+            $pharmacies[$cr]['adr_pharmacie']=$row['adr_pharmacie'];
+            $pharmacies[$cr]['quantité']=$row['quantité'];
+            $cr++;
         }
-        else
-        {
-        }
+        echo json_encode($pharmacies);
     }
-
+    else
+    {
+        http_response_code(404);
+    }
 ?>
