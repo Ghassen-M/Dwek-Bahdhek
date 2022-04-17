@@ -48,7 +48,8 @@ import { SigninpharmacienComponent } from './signinpharmacien/signinpharmacien.c
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

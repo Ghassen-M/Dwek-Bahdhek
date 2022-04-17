@@ -23,13 +23,14 @@ export class ApiService {
     return this.http.put<any[]>('http://localhost/dwek_bahdhek/majCompte.php?email=' + data.email, data);
   }
   getCompte(): Observable<any> {
-    return this.http.get<any[]>('http://localhost/dwek_bahdhek/Compte.php?email=' + 'houcemkorbi@gmail.com');
+    return this.http.get<any[]>('http://localhost/dwek_bahdhek/Compte.php?email=' + 'khouloudtrabelsi@gmail.com');
   }
   deleteCompte(email: String) {
     return this.http.delete<any[]>('http://localhost/dwek_bahdhek/deleteCompte.php?email=' + email);
   }
-  deletePharmacie(email: String) {
-    return this.http.delete<any[]>('http://localhost/dwek_bahdhek/deletePharmacie.php?email=' + email);
+  deletePharmacie(adr: String) {
+    let d={'adr': adr};
+    return this.http.post<any[]>('http://localhost/dwek_bahdhek/deletePharmacie.php?', d);
   }
   deleteArticles(email: String) {
     return this.http.delete<any[]>('http://localhost/dwek_bahdhek/deleteArticles.php?email=' + email);
@@ -40,5 +41,8 @@ export class ApiService {
   majPharmacie(ancienAdr:String,data: any) {
     data['ancienAdr']=ancienAdr;
     return this.http.put<any[]>('http://localhost/dwek_bahdhek/majPharmacie.php?', data);
+  }
+  getMeds(med:String) {
+    return this.http.get<any[]>('http://localhost/dwek_bahdhek/getMeds.php?med=' + med);
   }
 }

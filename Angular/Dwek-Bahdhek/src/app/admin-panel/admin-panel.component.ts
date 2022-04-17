@@ -14,7 +14,7 @@ export class AdminPanelComponent implements OnInit {
   }
   delete(compte: any): void {
     this.api.deleteCompteAttente(compte.email).subscribe(
-      (data: any) => {console.log(data);this.comptesAttente = this.comptesAttente.filter(u => u !== compte);}
+      (data: any) => {this.comptesAttente = this.comptesAttente.filter(u => u !== compte);}
     );
   }
   accept(compte: any): void {

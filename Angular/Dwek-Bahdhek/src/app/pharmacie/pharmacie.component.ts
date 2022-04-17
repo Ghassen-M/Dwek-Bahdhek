@@ -62,7 +62,21 @@ export class PharmacieComponent implements OnInit {
 
   }
   onSuppr(): void {
-    this.api.deletePharmacie(this.modifForm.value.email).subscribe();
+    this.api.deletePharmacie(this.modifForm.value.adr_pharmacie).subscribe(
+      (data) => {
+        this.dataRepresentation = [
+          ["Nom pharmacie", this.modifForm.value.nom_pharmacie],
+          ["Adresse pharmacie", this.modifForm.value.adr_pharmacie],
+          ["Type Pharmacie", this.modifForm.value.type_pharmacie],
+          ["Email pharmacie", this.modifForm.value.email_pharmacie],
+          ["Téléphone pharmacie", this.modifForm.value.tel_pharmacie]
+        ];
+        this.modifForm.patchValue(data);
+
+      }
+
+    );
+    this.isModif=false;
   }
 
 }
