@@ -1,1 +1,92 @@
-<p>signinmedecin works!</p>
+<div class="container">
+    <form action="#" [formGroup]="medecin" (ngSubmit)="onSubmit()">
+        <div class="row ">
+            <h4>{{title}}</h4>
+            <div class="col-6">
+                <label id="n">nom</label>
+                <input type="text" id="nom" class="form-control" formControlName="nom" placeholder=" nom">
+                <span class="text-danger" *ngIf="f['nom'].invalid && f['nom'].touched " class="text-danger">
+                    verifier le nom
+                </span>
+            </div>
+            <div class="col-6 ">
+                <label id="pn">prenom</label>
+                <input type="text" id="prenom" class="form-control" placeholder="prenom" formControlName="prenom">
+                <span class="text-danger" *ngIf="f['prenom'].invalid && f['prenom'].touched">
+                    verifier le prenom
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label id="cn">cin</label>
+                <input type="text" id="cin" class="form-control" formControlName="cin" placeholder="cin">
+                <span class="text-danger" *ngIf="f['cin']?.invalid && f['cin'].touched">
+                    cin doit contenir 8 chiffres
+                </span>
+            </div>
+            <div class="col-6">
+                <label id="mail">email</label>
+                <input type="email" id="email" class="form-control" formControlName="email" placeholder="Email">
+                <span class="text-danger" *ngIf="f['email']?.invalid && f['email'].touched">
+                    verifier l'email </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label id="mp">mot de passe</label>
+                <input type="password" id="mdp" class="form-control" formControlName="mdp" placeholder="mot de passe ">
+                <span class="text-danger" *ngIf="f['mdp']?.touched &&f['mdp']?.invalid ">
+                    verifier le mot de passe </span>
+            </div>
+            <div class="col-6">
+                <label id="d">date de naissance</label>
+                <input id="dn" type="date" class="form-control" formControlName="dn">
+                <span class="text-danger" *ngIf="f['dn']?.invalid && f['dn']?.touched">
+                    verifier le dn </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label id="se">sexe</label>
+                <input type="radio" name="sexe" class=" sexe femme" id="sexe-femme">
+                <label for="sexe-femme">femme</label>
+                <input type="radio" name="sexe" class="  sexe homme" id="sexe-homme">
+                <label for="sexe-homme">homme</label>
+                <span class="text-danger" *ngIf="f['sexe']?.invalid && f['sexe']?.touched">
+                    verifier le sexe </span>
+            </div>
+            <div class="col-6">
+                <label id="tlp">numéro de téléphone</label>
+                <input type="text" id="tel" class="form-control" placeholder=" numéro de téléphone"
+                    formControlName="tel">
+                <span class="text-danger" *ngIf="f['tel']?.invalid && f['tel']?.touched">
+                    tel doit contenir 8 chiffres
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label for="formFile" class="form-label">Copie PDF des diplômes et des documents vérifiant votre
+                    identité (dans un seul fichier)</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class=" col-6 ">
+                <label id="sp">spécialités</label>
+                <div class="select">
+                    <select formControlName="specialite" class="form-select form-select-sm">
+                        <option *ngFor="let s of specialite" [ngValue]="s">{{s}}</option>
+                    </select>
+                    <span *ngIf="f['specialite']?.invalid " class="text-danger">
+                        Insérer une
+                        spécialité valide </span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button id="b1" type="submit" class="btn">
+                envoyer
+            </button>
+        </div>
+    </form>
+</div>
