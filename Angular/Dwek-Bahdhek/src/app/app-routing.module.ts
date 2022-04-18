@@ -8,7 +8,6 @@ import { ClientComponent } from './client/client.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { MedecinComponent } from './medecin/medecin.component';
-import { PharmacieComponent } from './pharmacie/pharmacie.component';
 import { PharmacienComponent } from './pharmacien/pharmacien.component';
 import { SigninclientComponent } from './signinclient/signinclient.component';
 import { SigninmedecinComponent } from './signinmedecin/signinmedecin.component';
