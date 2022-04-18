@@ -10,9 +10,11 @@ export class BarreRechercheComponent implements OnInit {
   resultats: any[] = [];
   constructor(private api: ApiService) { }
   med="";
+  submitted=false;
   ngOnInit(): void {
   }
   submit(): void {
+    this.submitted=!this.submitted;
     this.api.getMeds(this.med).subscribe((data: any[]) => { this.med;this.resultats = data });
   }
 

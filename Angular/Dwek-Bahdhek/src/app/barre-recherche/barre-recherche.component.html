@@ -1,30 +1,38 @@
 <div>
     <div class="col-8 offset-2 bg-white shadow rounded">
-        <input [(ngModel)]="med" type="text">
-        <button (click)="submit()" type=" submit">
-            modifier
-        </button>
-        <table class="table ">
-            <thead>
-            <tr>
-                <th>Nom pharmacie</th>
-                <th>Type pharmacie</th>
-                <th>Numéro téléphone</th>
-                <th>Adresse</th>
-                <th>Quantité</th>
-            </tr>
-        </thead>
-            <tbody *ngFor="let result of resultats;">
-                <td>{{result.nom_pharmacie}}</td>
-                <td>{{result.type_pharmacie}}</td>
-                <td>{{result.tel_pharmacie}}</td>
-                <td>{{result.adr_pharmacie}}</td>
-                <td>{{result.quantite}}</td>
-            </tbody>
-        </table>
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" [(ngModel)]="med" placeholder="Tapez votre médicament à chercher!">
+            <div class="input-group-append">
+                <button class="btn btn-danger" type="button" (click)="submit()">Go!</button>
+            </div>
+        </div>
+
+
+        <div *ngIf="submitted">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th>Nom pharmacie</th>
+                        <th>Type pharmacie</th>
+                        <th>Numéro téléphone</th>
+                        <th>Adresse</th>
+                        <th>Quantité</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let result of resultats;">
+                    <td>{{result.nom_pharmacie}}</td>
+                    <td>{{result.type_pharmacie}}</td>
+                    <td>{{result.tel_pharmacie}}</td>
+                    <td>{{result.adr_pharmacie}}</td>
+                    <td>{{result.quantite}}</td>
+                </tbody>
+            </table>
+        </div>
+
     </div>
-    </div>
-    <div>
+</div>
+<div>
 
 
 </div>
