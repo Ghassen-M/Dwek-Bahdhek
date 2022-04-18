@@ -10,6 +10,9 @@ import { LoginComponent } from './login/login.component';
 import { MedecinComponent } from './medecin/medecin.component';
 import { PharmacieComponent } from './pharmacie/pharmacie.component';
 import { PharmacienComponent } from './pharmacien/pharmacien.component';
+import { SigninclientComponent } from './signinclient/signinclient.component';
+import { SigninmedecinComponent } from './signinmedecin/signinmedecin.component';
+import { SigninpharmacienComponent } from './signinpharmacien/signinpharmacien.component';
 
 const routes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -17,6 +20,9 @@ const routes: Routes = [
     { path: 'contact', component: ContactComponent },
     { path: 'barre', component: BarreRechercheComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'signinclient', component: SigninclientComponent },
+    { path: 'signinmedecin', component: SigninmedecinComponent },
+    { path: 'signinpharmacien', component: SigninpharmacienComponent },
     { path: 'client', component: ClientComponent },
     { path: 'medecin', component: MedecinComponent },
     { path: 'pharmacien', component: PharmacienComponent },
@@ -32,4 +38,4 @@ const routes: Routes = [
 export class AppRoutingModule {
 }
 
-export const routingComponents = [AboutComponent, ContactComponent, BarreRechercheComponent, ClientComponent, MedecinComponent, PharmacienComponent, AdminPanelComponent]
+export const routingComponents = [AboutComponent, ContactComponent, BarreRechercheComponent, ClientComponent, MedecinComponent, PharmacienComponent, AdminPanelComponent, SigninclientComponent, SigninmedecinComponent, SigninpharmacienComponent]
