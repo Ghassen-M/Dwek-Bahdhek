@@ -6,6 +6,7 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { BarreRechercheComponent } from './barre-recherche/barre-recherche.component';
 import { ClientComponent } from './client/client.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
 import { MedecinComponent } from './medecin/medecin.component';
 import { PharmacieComponent } from './pharmacie/pharmacie.component';
 import { PharmacienComponent } from './pharmacien/pharmacien.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
     { path: 'accueil', component: AccueilComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'barre', component: BarreRechercheComponent },
+    { path: 'login', component: LoginComponent },
     { path: 'client', component: ClientComponent },
     { path: 'medecin', component: MedecinComponent },
     { path: 'pharmacien', component: PharmacienComponent },
