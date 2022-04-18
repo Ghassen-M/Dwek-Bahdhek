@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { AccueilComponent } from './accueil/accueil.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { BarreRechercheComponent } from './barre-recherche/barre-recherche.component';
 import { ClientComponent } from './client/client.component';
@@ -11,14 +12,15 @@ import { PharmacienComponent } from './pharmacien/pharmacien.component';
 
 const routes: Routes = [
     { path: 'about', component: AboutComponent },
+    { path: 'accueil', component: AccueilComponent },
     { path: 'contact', component: ContactComponent },
-    { path: 'search', component: BarreRechercheComponent },
+    { path: 'barre', component: BarreRechercheComponent },
     { path: 'client', component: ClientComponent },
     { path: 'medecin', component: MedecinComponent },
     { path: 'pharmacien', component: PharmacienComponent },
-    { path: 'admin', component: AdminPanelComponent},
-    /*{ path: '',   redirectTo: '/home', pathMatch: 'full' },*/
-   /* { path: '**',   redirectTo: '/home', pathMatch: 'full' }*/
+    { path: 'admin', component: AdminPanelComponent },
+    { path: '', redirectTo: '/accueil', pathMatch: 'full' },
+    { path: '**', redirectTo: '/accueil', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -28,4 +30,4 @@ const routes: Routes = [
 export class AppRoutingModule {
 }
 
-export const routingComponents=[AboutComponent,ContactComponent,BarreRechercheComponent,ClientComponent,MedecinComponent,PharmacienComponent,AdminPanelComponent]
+export const routingComponents = [AboutComponent, ContactComponent, BarreRechercheComponent, ClientComponent, MedecinComponent, PharmacienComponent, AdminPanelComponent]
