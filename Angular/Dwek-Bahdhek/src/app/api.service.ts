@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-
+  
   getcomptesAttente(): Observable<any> {
     return this.http.get<any[]>('http://localhost/dwek_bahdhek/comptesAttente.php');
   }
