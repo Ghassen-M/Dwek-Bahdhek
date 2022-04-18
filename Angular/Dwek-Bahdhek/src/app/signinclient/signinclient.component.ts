@@ -10,7 +10,6 @@ import { ApiService } from '../api.service';
 export class SigninclientComponent implements OnInit {
   title = "créer un compte client"
   sexe = ["homme", "femme"];
-  data = { nom: "", prenom: "", email: "", mdp: "", dn: "", sexe: "" };
   client = new FormGroup({
     nom: new FormControl('', [Validators.required, Validators.pattern("[A-Za-z]*$")]),
     prenom: new FormControl('', [Validators.required, Validators.pattern("[A-Za-z]*$")]),

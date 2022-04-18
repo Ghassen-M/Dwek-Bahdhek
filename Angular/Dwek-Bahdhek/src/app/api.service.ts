@@ -48,4 +48,10 @@ export class ApiService {
   ajoutClient(data: String) {
     return this.http.post<any[]>('http://localhost/dwek_bahdhek/ajoutClient.php?', data);
   }
+  ajoutMedecin(data: String) {
+    return this.http.post<any[]>('http://localhost/dwek_bahdhek/ajoutMed.php?', data);
+  }
+  ajoutPharmacien(data: String) {
+    return this.http.post<any[]>('http://localhost/dwek_bahdhek/ajoutPharmacien.php?', data);
+  }
 }

@@ -3,14 +3,14 @@
         <div class="row ">
             <h4>{{title}}</h4>
             <div class="col-6">
-                <label id="n">nom</label>
+                <label id="n">Nom</label>
                 <input type="text" id="nom" class="form-control" formControlName="nom" placeholder=" nom">
                 <span class="text-danger" *ngIf="f['nom'].invalid && f['nom'].touched " class="text-danger">
                     verifier le nom
                 </span>
             </div>
             <div class="col-6 ">
-                <label id="pn">prenom</label>
+                <label id="pn">Prénom</label>
                 <input type="text" id="prenom" class="form-control" placeholder="prenom" formControlName="prenom">
                 <span class="text-danger" *ngIf="f['prenom'].invalid && f['prenom'].touched">
                     verifier le prenom
@@ -34,7 +34,7 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <label id="mp">mot de passe</label>
+                <label id="mp">Mot de passe</label>
                 <input type="password" id="mdp" class="form-control" formControlName="mdp" placeholder="mot de passe ">
                 <span class="text-danger" *ngIf="f['mdp']?.touched &&f['mdp']?.invalid ">
                     verifier le mot de passe </span>
@@ -48,13 +48,12 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <label id="se">sexe</label>
-                <input type="radio" name="sexe" class=" sexe femme" id="sexe-femme">
-                <label for="sexe-femme">femme</label>
-                <input type="radio" name="sexe" class="  sexe homme" id="sexe-homme">
-                <label for="sexe-homme">homme</label>
-                <span class="text-danger" *ngIf="f['sexe']?.invalid && f['sexe']?.touched">
-                    verifier le sexe </span>
+                <h6>Sexe</h6>
+                <div class="col-4 offset-4">
+                    <select formControlName="sexe" class="form-select form-select-sm">
+                        <option *ngFor="let s of sexe" [ngValue]="s">{{s}}</option>
+                    </select>
+                </div>
             </div>
             <div class="col-6">
                 <label id="tlp">numéro de téléphone</label>
@@ -67,12 +66,11 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <label for="formFile" class="form-label">Copie PDF des diplômes et des documents vérifiant votre
-                    identité (dans un seul fichier)</label>
-                <input class="form-control" type="file" id="formFile">
+                <label for="formFile" class="form-label">Copie PDF des documents vérifiant votre identité</label>
+                <input class="form-control" formControlName="file" type="text" id="formFile">
             </div>
             <div class=" col-6 ">
-                <label id="sp">spécialités</label>
+                <label id="sp">Spécialité</label>
                 <div class="select">
                     <select formControlName="specialite" class="form-select form-select-sm">
                         <option *ngFor="let s of specialite" [ngValue]="s">{{s}}</option>

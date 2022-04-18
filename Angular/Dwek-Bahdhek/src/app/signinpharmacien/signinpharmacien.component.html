@@ -52,13 +52,12 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <label id="se">sexe</label>
-                <input type="radio" name="sexe" class=" sexe femme" id="sexe-femme">
-                <label for="sexe-femme">femme</label>
-                <input type="radio" name="sexe" class="  sexe homme" id="sexe-homme">
-                <label for="sexe-homme">homme</label>
-                <span class="text-danger" *ngIf="f['sexe']?.invalid && f['sexe']?.touched">
-                    verifier le sexe </span>
+                <h6>Sexe</h6>
+                <div class="">
+                    <select formControlName="sexe" class="form-select form-select-sm">
+                        <option *ngFor="let s of sexe" [ngValue]="s">{{s}}</option>
+                    </select>
+                </div>
             </div>
             <div class="col-6">
                 <label id="tlp">numéro de téléphone</label>
@@ -71,21 +70,12 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <label for="formFile" class="form-label">Copie PDF des diplômes et des documents vérifiant votre
-                    identité (dans un seul fichier)</label>
-                <input class="form-control" type="file" id="formFile">
-            </div>
-            <div class=" col-6 ">
-                <label id="lrr">Lieu de Résidence</label>
-                <input type="text" id="lr" class="form-control" formControlName="lr" placeholder=" Lieu de Résidence"
-                    required>
-                <span class="text-danger" *ngIf="f['lr']?.invalid && f['lr']?.touched " id="lr">
-                    verifier le lieu de residence
-                </span>
+                <label for="formFile" class="form-label">Copie PDFdes documents vérifiant votre identité</label>
+                <input class="form-control" type="text" formControlName="file" id="formFile">
             </div>
         </div>
         <div class="d-flex justify-content-center">
-            <button id="b1" type=" submit" (click)="onSubmit()" class="btn">
+            <button id="b1" type=" submit" class="btn">
                 envoyer
             </button>
         </div>
