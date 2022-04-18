@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 
@@ -42,14 +42,15 @@ import { SigninpharmacienComponent } from './signinpharmacien/signinpharmacien.c
     NavbarComponent,
     SigninclientComponent,
     SigninmedecinComponent,
-    SigninpharmacienComponent
+    SigninpharmacienComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
