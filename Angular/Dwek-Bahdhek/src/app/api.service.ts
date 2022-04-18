@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  
+
   getcomptesAttente(): Observable<any> {
     return this.http.get<any[]>('http://localhost/dwek_bahdhek/comptesAttente.php');
   }
@@ -18,8 +18,8 @@ export class ApiService {
     let emailJson = { 'email': email, 'mdp': mdp };
     return this.http.put<any[]>('http://localhost/dwek_bahdhek/acceptCompteAttente.php?email=' + email + '&mdp=' + mdp, emailJson);
   }
-  majCompte(ancienEmail:String, data: any) {
-    data['ancienEmail']=ancienEmail;
+  majCompte(ancienEmail: String, data: any) {
+    data['ancienEmail'] = ancienEmail;
     return this.http.put<any[]>('http://localhost/dwek_bahdhek/majCompte.php?email=' + data.email, data);
   }
   getCompte(): Observable<any> {
@@ -29,7 +29,7 @@ export class ApiService {
     return this.http.delete<any[]>('http://localhost/dwek_bahdhek/deleteCompte.php?email=' + email);
   }
   deletePharmacie(adr: String) {
-    let d={'adr': adr};
+    let d = { 'adr': adr };
     return this.http.post<any[]>('http://localhost/dwek_bahdhek/deletePharmacie.php?', d);
   }
   deleteArticles(email: String) {
@@ -38,11 +38,14 @@ export class ApiService {
   getPharmacie(): Observable<any> {
     return this.http.get<any[]>('http://localhost/dwek_bahdhek/pharmacie.php?email=' + 'khouloudtrabelsi@gmail.com');
   }
-  majPharmacie(ancienAdr:String,data: any) {
-    data['ancienAdr']=ancienAdr;
+  majPharmacie(ancienAdr: String, data: any) {
+    data['ancienAdr'] = ancienAdr;
     return this.http.put<any[]>('http://localhost/dwek_bahdhek/majPharmacie.php?', data);
   }
-  getMeds(med:String) {
+  getMeds(med: String) {
     return this.http.get<any[]>('http://localhost/dwek_bahdhek/getMeds.php?med=' + med);
+  }
+  ajoutClient(data: String) {
+    return this.http.post<any[]>('http://localhost/dwek_bahdhek/ajoutClient.php?', data);
   }
 }
