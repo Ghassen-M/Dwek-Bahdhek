@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ApiService } from '../api.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,16 +14,15 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', [Validators.required])
   });
   isInscri = false;
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   ngOnInit() {
   }
 
-  onSubmit(): void {
-    if (this.loginForm.valid)
-      console.log(this.loginForm.value);
+  onSubmit() {
+    this.api.login(this.loginForm.value).subscribe(data => console.log(data));
+    alert('validé');
   }
-
   inscri(): void {
     this.isInscri = true;
   }

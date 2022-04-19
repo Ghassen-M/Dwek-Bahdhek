@@ -54,4 +54,7 @@ export class ApiService {
   ajoutPharmacien(data: String) {
     return this.http.post<any[]>('http://localhost/dwek_bahdhek/ajoutPharmacien.php?', data);
   }
+  login(data: String) {
+    return this.http.post<any[]>('http://localhost/dwek_bahdhek/loginAccueil.php?', data);
+  }
 }
